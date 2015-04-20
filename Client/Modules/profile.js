@@ -10,6 +10,7 @@ starred.controller = function(){
   ctrl = this;
   ctrl.meetupList; 
   var email = {email: JSON.parse(localStorage.getItem('session')).email};
+  console.log(email);
 
   ctrl.getMeetups = function () {
     return m.request({method:"POST", url:"/mymeetups", data: email}).then(function(result){
